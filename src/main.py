@@ -20,14 +20,14 @@ Client = commands.Bot(command_prefix=f'{Prefix}', intents=discord.Intents.all())
 @Client.event
 async def on_ready():
     print(f"✦ Logged in as {Client.user}\n✦ Py-cord version: {discord.__version__}")
-    await Client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="anime"))
+    await Client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="servers"))
 
 @Client.command(name="ping")
 async def ping(ctx):
     await ctx.trigger_typing()
     await ctx.reply(f"My Ping Is **{round(Client.latency * 1000)}ms**")
 
-@Client.command(name='stats')
+@Client.command(name='status')
 async def host(ctx):
     up = uptime()
     time = float(up)
@@ -54,6 +54,7 @@ async def host(ctx):
     Embed.add_field(name= f"⎯ HOST ⎯", value= f"**Organization**: {response['isp']}\n**IP Address**: {response['query']}")
     Embed.add_field(name= f"⎯ USAGES ⎯", value= f"\n**```\n\n{cpu_usage} \n{ram_usage}\n{swap_usage}\n{disk_usage}```**", inline=False)
     Embed.set_footer(text=f"Requested by {ctx.author.display_name} | Created by Aaron_#1209", icon_url=ctx.author.display_avatar.url)
+    await ctx.trigger_typing()
     await ctx.reply(embed=Embed)
 
 Client.run(Token)
