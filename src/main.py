@@ -47,7 +47,6 @@ async def host(ctx):
 
     Embed = discord.Embed()
     Embed.set_author(name="SysInfo", url="https://s10.gifyu.com/images/SrfeN.png", icon_url="https://s10.gifyu.com/images/SrfeN.png")
-    Embed.set_thumbnail(url="https://s10.gifyu.com/images/SrfeN.png")
     Embed.add_field(name=f"⎯ CPU ⎯",value=f"**Model**: {cpu}\n**Cores**: {threads}", inline=True)
     Embed.add_field(name=f"⎯ RAM ⎯", value=f"**Total RAM**: {round(psutil.virtual_memory().total/1000000000, 2)}GB\n**Total Swap**: {psutil.swap_memory().total /1024 /1024 / 1024}GB",inline=True)
     Embed.add_field(name=f"⎯ UPTIME ⎯", value=f"{uptime_stamp}", inline=True)
