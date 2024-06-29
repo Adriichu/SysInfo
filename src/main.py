@@ -46,14 +46,14 @@ async def host(ctx):
     disk_usage = f"Disk Usage: {round(psutil.disk_usage('/').used/1000000000, 2)}GB / {round(psutil.disk_usage('/').total/1000000000, 2)}GB"
 
     Embed = discord.Embed()
-    Embed.set_author(name="SysInfo", url="https://adriichu.gay", icon_url="https://cdn.discordapp.com/attachments/1034061817674215514/1097544402450268361/A8WZiTLs_4x.png")
-    Embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1034061817674215514/1097544402450268361/A8WZiTLs_4x.png")
+    Embed.set_author(name="SysInfo", url="https://s10.gifyu.com/images/SrfeN.png", icon_url="https://s10.gifyu.com/images/SrfeN.png")
+    Embed.set_thumbnail(url="https://s10.gifyu.com/images/SrfeN.png")
     Embed.add_field(name=f"⎯ CPU ⎯",value=f"**Model**: {cpu}\n**Cores**: {threads}", inline=True)
     Embed.add_field(name=f"⎯ RAM ⎯", value=f"**Total RAM**: {round(psutil.virtual_memory().total/1000000000, 2)}GB\n**Total Swap**: {psutil.swap_memory().total /1024 /1024 / 1024}GB",inline=True)
     Embed.add_field(name=f"⎯ UPTIME ⎯", value=f"{uptime_stamp}", inline=True)
     Embed.add_field(name= f"⎯ HOST ⎯", value= f"**Organization**: {response['isp']}\n**IP Address**: {response['query']}")
     Embed.add_field(name= f"⎯ USAGES ⎯", value= f"\n**```\n\n{cpu_usage} \n{ram_usage}\n{swap_usage}\n{disk_usage}```**", inline=False)
-    Embed.set_footer(text=f"Requested by {ctx.author.display_name} | Created by Aaron_#1209", icon_url=ctx.author.display_avatar.url)
+    Embed.set_footer(text=f"Requested by {ctx.author.display_name} | Created by adriichu#0", icon_url=ctx.author.display_avatar.url)
     await ctx.trigger_typing()
     await ctx.reply(embed=Embed)
 
