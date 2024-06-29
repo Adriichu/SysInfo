@@ -8,7 +8,7 @@
 
 SysInfo developed using `py-cord` allows you to view important system specifications and usages right from the comfort of your Discord server.
 
-<img src="https://media.discordapp.net/attachments/1034061817674215514/1097553448809005136/image.png?width=910&height=647">
+<img src="https://s12.gifyu.com/images/SrYb3.png" width="910" height="647">
 
 ## 🔗 Commands
 * ping 
