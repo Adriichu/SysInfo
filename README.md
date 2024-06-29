@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://s10.gifyu.com/images/SrfXC.png" width="128">
+  <img src="https://s10.gifyu.com/images/SrfXO.png" width="128">
 </p>
 
 <h1 align="center">
