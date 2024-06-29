@@ -2,3 +2,4 @@ psutil
 py-cord
 uptime
 py-cpuinfo
+requests
